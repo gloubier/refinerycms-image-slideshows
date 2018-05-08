@@ -1,4 +1,4 @@
-Refinery::Core::Engine.routes.append do
+Refinery::Core::Engine.routes.draw do
 
   # Admin routes
   namespace :image_slideshows, :path => '' do

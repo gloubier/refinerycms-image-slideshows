@@ -1,4 +1,4 @@
-class CreateImageSlideshowsImageSlideshows < ActiveRecord::Migration
+class CreateImageSlideshowsImageSlideshows < ActiveRecord::Migration[5.1]
 
   def up
     create_table :refinery_image_slideshows do |t|

@@ -5,9 +5,9 @@ module Refinery
 
       acts_as_indexed :fields => [:title]
 
-      validates :title, :presence => true, :uniqueness => true
+      validates :title, presence: true, uniqueness: true
 
-      has_many :image_slides, :dependent => :destroy
+      has_many :image_slides, dependent: :destroy
     end
   end
 end

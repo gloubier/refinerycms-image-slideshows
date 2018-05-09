@@ -11,16 +11,16 @@ module Refinery
 
       class << self
 
-        def active
-          where active: true
+        def live
+          where draft: false
         end
 
-        def with_active_slides
-          includes(:image_slides).where( refinery_image_slides: { active: true } )
+        def with_live_slides
+          includes(:image_slides).where( refinery_image_slides: { draft: false } )
         end
 
         def slideshow_by_title(title)
-          active.with_active_slides.find_by_title(title)
+          live.with_live_slides.find_by_title(title)
         end
 
       end

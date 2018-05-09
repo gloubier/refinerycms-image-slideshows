@@ -18,8 +18,8 @@ module Refinery
 
       class << self
 
-        def active
-          where active: true
+        def live
+          where draft: false
         end
 
       end

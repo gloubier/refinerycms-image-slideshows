@@ -24,9 +24,9 @@
     <% end %>
   </span>
 
-  <%= content_tag :span, class: "#{image_slide.active? ? :success_icon : :failure_icon} less-important" do %>
-    <strong><%== t(image_slide.active? ? 'active' : 'inactive', scope: 'refinery.image_slideshows.admin.states' ).titleize %></strong>
-  <% end %>
+  <%= content_tag :span, class: 'label notice' do
+    ::I18n.t('draft', :scope => 'refinery.image_slideshows.admin.image_slides.records')
+  end if image_slide.draft?  %>
 
   <span class='actions'>
     <%= action_icon(:edit,    edit_url ,  t('edit',   scope: 'refinery.image_slideshows.admin.image_slides.image_slide' ) ) %>

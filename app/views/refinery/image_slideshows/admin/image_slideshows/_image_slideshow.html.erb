@@ -15,9 +15,9 @@
     <% end %>
   </span>
 
-  <%= content_tag :span, class: "#{image_slideshow.active? ? :success_icon : :failure_icon} less-important" do %>
-    <strong><%== t(image_slideshow.active? ? 'active' : 'inactive', scope: 'refinery.image_slideshows.admin.states' ).titleize %></strong>
-  <% end %>
+  <%= content_tag :span, class: 'label notice' do
+    ::I18n.t('draft', :scope => 'refinery.image_slideshows.admin.image_slideshows.records')
+  end if image_slideshow.draft?  %>
 
   <span class='actions'>
     <%= action_icon(:switch_view_list,  manage_url,  t('.manage_image_slides') ) %>

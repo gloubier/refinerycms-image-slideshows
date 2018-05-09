@@ -15,14 +15,6 @@ module Refinery
           where draft: false
         end
 
-        def with_live_slides
-          includes(:image_slides).where( refinery_image_slides: { draft: false } )
-        end
-
-        def slideshow_by_title(title)
-          live.with_live_slides.find_by_title(title)
-        end
-
       end
 
       def live?

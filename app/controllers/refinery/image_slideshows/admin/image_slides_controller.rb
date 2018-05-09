@@ -9,7 +9,7 @@ module Refinery
 
         before_action :find_image_slideshow
         before_action :find_image_slides, only: :index
-        before_action :find_image_slide, :except => [:index, :new]
+        before_action :find_image_slide, except: %i( index new )
 
         def create
           if Refinery::ImageSlideshows::ImageSlide.any?

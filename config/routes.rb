@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 Refinery::Core::Engine.routes.draw do
 
   # Admin routes

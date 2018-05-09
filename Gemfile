@@ -4,17 +4,17 @@ gemspec
 
 # TODO: use master branch before merging this PR
 # git "https://github.com/refinery/refinerycms", branch: "master" do
-git "https://github.com/refinery/refinerycms", branch: "feature/mobility" do
+git 'https://github.com/refinery/refinerycms', branch: 'feature/mobility' do
 
-  gem "refinerycms"
+  gem 'refinerycms'
 
   group :test do
-    gem "refinerycms-testing"
+    gem 'refinerycms-testing'
   end
 end
 
-# TODO: remove refinerycms-i18n and mobility from this Gemfile before merging this PR
-gem 'refinerycms-i18n', git: "https://github.com/refinery/refinerycms-i18n", branch: 'feature/mobility'
+# TODO: remove refinerycms-i18n and mobility from this Gemfile before merging
+gem 'refinerycms-i18n', github: 'refinery/refinerycms-i18n', branch: 'feature/mobility'
 
 # Database Configuration
 unless ENV["TRAVIS"]

@@ -1,7 +1,7 @@
+# frozen_string_literal: true
 class CreateImageSlidesTranslations < ActiveRecord::Migration[5.1]
   def change
     create_table :refinery_image_slide_translations do |t|
-
       # Translated attribute(s)
       t.string :title
       t.string :caption

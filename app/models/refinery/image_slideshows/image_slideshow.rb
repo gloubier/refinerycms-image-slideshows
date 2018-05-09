@@ -25,6 +25,10 @@ module Refinery
 
       end
 
+      def live?
+        !draft?
+      end
+
     end
   end
 end

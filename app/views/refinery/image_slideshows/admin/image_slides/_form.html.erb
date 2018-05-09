@@ -9,6 +9,11 @@
   <%= f.hidden_field :image_slideshow_id, :value => @image_slideshow.id  %>
 
   <div class='field'>
+    <%= f.check_box :active %>
+    <%= f.label :active, :class => 'stripped' %>
+  </div>
+
+  <div class='field'>
     <%= f.label :title %>
     <%= f.text_field :title, :class => 'larger widest'  %>
   </div>

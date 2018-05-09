@@ -5,6 +5,9 @@ fr:
         title: Diaporamas
     image_slideshows:
       admin:
+        states:
+          active: actif
+          inactive: inactif
         image_slideshows:
           actions:
             create_new: Créer un nouveau diaporama
@@ -42,12 +45,14 @@ fr:
   activerecord:
     attributes:
       refinery/image_slideshows/image_slide:
+        active: Actif
         title: Titre
         image: Image
         caption: Légende
         link_url: Lien
         body: Corps du texte
       refinery/image_slideshows/image_slideshow:
+        active: Actif
         title: Titre
         height: Hauteur
         width: Largeur

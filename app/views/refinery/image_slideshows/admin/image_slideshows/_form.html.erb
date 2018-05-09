@@ -3,6 +3,10 @@
               :object => @image_slideshow,
               :include_object_name => true %>
 
+  <div class='field'>
+    <%= f.check_box :active %>
+    <%= f.label :active, :class => 'stripped' %>
+  </div>
 
   <div class='field'>
     <%= f.label :title %>

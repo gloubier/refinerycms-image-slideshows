@@ -15,6 +15,15 @@ module Refinery
       belongs_to :image, class_name: '::Refinery::Image'
 
       delegate :height, :width, to: :image_slideshow
+
+      class << self
+
+        def active
+          where active: true
+        end
+
+      end
+
     end
   end
 end

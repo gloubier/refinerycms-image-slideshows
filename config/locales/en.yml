@@ -5,6 +5,9 @@ en:
         title: Image Slideshows
     image_slideshows:
       admin:
+        states:
+          active: active
+          inactive: inactive
         image_slideshows:
           actions:
             create_new: Add New Image Slideshow
@@ -41,12 +44,14 @@ en:
   activerecord:
     attributes:
       refinery/image_slideshows/image_slide:
+        active: Active
         title: Title
         image: Image
         caption: Caption
         link_url: Link
         body: Text body
       refinery/image_slideshows/image_slideshow:
+        active: Active
         title: Title
         height: Height
         width: Width

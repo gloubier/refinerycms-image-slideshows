@@ -48,16 +48,7 @@ module Refinery
         private
       
           def permitted_image_slide_params
-            [
-              :id,
-              :title,
-              :image_id,
-              :caption,
-              :link_url,
-              :body,
-              :position,
-              :image_slideshow_id
-            ]
+            %i( id active title image_id caption link_url body position image_slideshow_id )
           end
 
         def image_slides_path

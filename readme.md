@@ -49,7 +49,7 @@ Add this code in your HTML) :
 
 ```html+erb
   <body>
-    <% main_slideshow = Refinery::ImageSlideshows::ImageSlideshow.includes(:image_slides).find_by_title('Your Awesome Slideshow Title') %>
+    <% main_slideshow = Refinery::ImageSlideshows::ImageSlideshow.slideshow_by_title('Your Awesome Slideshow Title') %>
     <div id="wrapper">
       <div class="slider-wrapper">
         <div id="slider">

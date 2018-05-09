@@ -9,6 +9,7 @@ module Refinery
 
           def image_slideshow_params
             params.require(:image_slideshow).permit(
+              :active,
               :title,
               :position,
               :js_config,

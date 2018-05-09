@@ -9,6 +9,7 @@
 %>
 <li class='clearfix record <%= cycle("on", "on-hover") %>' id="<%= dom_id(image_slide) -%>" style="background-color: #EAEAEA; margin-bottom: 10px;">
   <%= image_fu image_slide.image, '128x128', :style => 'padding: 1em 1em 0 1em;' %>
+
   <span class="preview">
     <% image_slide.translations.each do |translation| %>
       <% if translation.title.present? %>
@@ -22,6 +23,10 @@
       <% end %>
     <% end %>
   </span>
+
+  <%= content_tag :span, class: "#{image_slide.active? ? :success_icon : :failure_icon} less-important" do %>
+    <strong><%== t(image_slide.active? ? 'active' : 'inactive', scope: 'refinery.image_slideshows.admin.states' ).titleize %></strong>
+  <% end %>
 
   <span class='actions'>
     <%= action_icon(:edit,    edit_url ,  t('edit',   scope: 'refinery.image_slideshows.admin.image_slides.image_slide' ) ) %>

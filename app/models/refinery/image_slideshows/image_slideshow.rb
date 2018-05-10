@@ -3,7 +3,7 @@ module Refinery
     class ImageSlideshow < Refinery::Core::BaseModel
       self.table_name = 'refinery_image_slideshows'
 
-      acts_as_indexed :fields => [:title]
+      acts_as_indexed fields: [:title]
 
       validates :title, presence: true, uniqueness: true
 

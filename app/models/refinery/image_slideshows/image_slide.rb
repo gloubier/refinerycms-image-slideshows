@@ -9,12 +9,9 @@ module Refinery
       acts_as_indexed fields: [:title]
 
       validates :title, presence: true
-      validates :image_id, presence: true
 
       belongs_to :image_slideshow
       belongs_to :image, class_name: '::Refinery::Image'
-
-      delegate :height, :width, to: :image_slideshow
 
       class << self
 

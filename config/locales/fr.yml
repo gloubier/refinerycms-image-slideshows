@@ -1,55 +1,58 @@
 fr:
   refinery:
     plugins:
-      image_slides:
-        title: Image Slides
-      image_slideshows:
-        title: Image Slideshows
-    image_slides:
-      admin:
-        image_slides:
-          actions:
-            create_new: Créer un(e) nouve(au/l/lle) Image Slide
-            reorder: Réordonner les Image Slides
-            reorder_done: Fin de réordonnancement des Image Slides
-          records:
-            title: Image Slides
-            sorry_no_results: Désolé ! Aucun résultat.
-            no_items_yet: Il n'y a actuellement aucun(e) Image Slide. Cliquer sur
-              "Créer un(e) nouve(au/l/lle) Image Slide" pour créer votre premi(er/ère)
-              image slide.
-          image_slide:
-            view_live_html: Voir ce(t/tte) image slide <br/><em>(Ouvre une nouvelle
-              fenêtre)</em>
-            edit: Modifier ce(t/tte) image slide
-            delete: Supprimer définitivement ce(t/tte) image slide
-      image_slides:
-        show:
-          other: Autres Image Slides
+      refinery_image_slideshows:
+        title: Diaporamas
     image_slideshows:
       admin:
         image_slideshows:
           actions:
-            create_new: Créer un(e) nouve(au/l/lle) Image Slideshow
-            reorder: Réordonner les Image Slideshows
-            reorder_done: Fin de réordonnancement des Image Slideshows
+            create_new: Créer un nouveau diaporama
+            reorder: Réordonner les diaporamas
+            reorder_done: Fin de réordonnancement des diaporamas
           records:
-            title: Image Slideshows
+            title: Diaporamas
             sorry_no_results: Désolé ! Aucun résultat.
-            no_items_yet: Il n'y a actuellement aucun(e) Image Slideshow. Cliquer
-              sur "Créer un(e) nouve(au/l/lle) Image Slideshow" pour créer votre premi(er/ère)
-              image slideshow.
+            no_items_yet: Il n'y a actuellement aucun diaporama. Cliquez sur "Créer un nouveau diaporama" pour créer votre premier diaporama.
+            draft: Brouillon
           image_slideshow:
-            view_live_html: Voir ce(t/tte) image slideshow <br/><em>(Ouvre une nouvelle
-              fenêtre)</em>
-            edit: Modifier ce(t/tte) image slideshow
-            delete: Supprimer définitivement ce(t/tte) image slideshow
-      image_slideshows:
-        show:
-          other: Autres Image Slideshows
+            view_live_html: Voir ce diaporama <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce diaporama
+            manage_image_slides: Gérer les diapos
+            delete: Supprimer définitivement ce diaporama
+        image_slides:
+          created: La diapo a bien été crée.
+          updated: La diapo a bien été mise à jour.
+          deleted: La diapo a bien été supprimée.
+
+          index:
+            slideshow: "Diaporama"
+          actions:
+            create_new: Créer une nouvelle diapo
+            reorder: Réorganiser les diapos
+            reorder_done: Fin de réordonnancement des diapos
+            back_to_image_slideshows: Retourner aux diaporamas
+          records:
+            title: Diapos
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucune diapo. Cliquez sur "Créer une nouvelle diapo" pour créer votre première diapo.
+            draft: Brouillon
+          image_slide:
+            view_live_html: Voir cette diapo <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier cette diapo
+            delete: Supprimer définitivement cette diapo
   activerecord:
     attributes:
-      refinery/image_slides/image_slide:
-        title: Title
+      refinery/image_slideshows/image_slide:
+        draft: Brouillon
+        title: Titre
+        image: Image
+        caption: Légende
+        link_url: Lien
+        body: Corps du texte
       refinery/image_slideshows/image_slideshow:
-        title: Title
+        draft: Brouillon
+        title: Titre
+        height: Hauteur
+        width: Largeur
+        js_config: Configuration Javascript

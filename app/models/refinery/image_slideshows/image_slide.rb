@@ -3,17 +3,28 @@ module Refinery
     class ImageSlide < Refinery::Core::BaseModel
       self.table_name = 'refinery_image_slides'
 
-      attr_accessible :title, :image_id, :caption, :link_url, :position, :image_slideshow_id
+      extend Mobility
+      translates :title, :caption, :link_url, :body
 
-      acts_as_indexed :fields => [:title]
+      acts_as_indexed fields: [:title]
 
-      validates :title, :presence => true
-      validates :image_id, :presence => true
+      validates :title, presence: true
 
       belongs_to :image_slideshow
-      belongs_to :image
+      belongs_to :image, class_name: '::Refinery::Image'
 
-      delegate :height, :width, :to => :image_slideshow
+      class << self
+
+        def live
+          where draft: false
+        end
+
+      end
+
+      def live?
+        !draft?
+      end
+
     end
   end
 end

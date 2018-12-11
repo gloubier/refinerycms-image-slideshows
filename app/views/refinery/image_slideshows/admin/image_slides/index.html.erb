@@ -1,5 +1,5 @@
 <% if @image_slideshow.present? %>
-  <h2><%= @image_slideshow.title %> Slideshow</h2>
+  <h2><%= "#{t('.slideshow')} : #{@image_slideshow.title}" %></h2>
 <% end %>
 <section id='records'>
   <%= render 'records' %>

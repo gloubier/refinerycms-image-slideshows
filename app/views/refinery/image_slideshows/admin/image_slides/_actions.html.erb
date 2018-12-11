@@ -1,15 +1,15 @@
 <ul>
   <li>
-    <%= link_to 'Add Image Slide', refinery.new_image_slideshows_admin_image_slideshow_image_slide_path,
+    <%= link_to t('.create_new'), refinery.new_image_slideshows_admin_image_slideshow_image_slide_path,
                  :class => "add_icon" %>
   </li>
   <li>
-    <%= link_to 'Reorder Image Slides',
+    <%= link_to t('.reorder'),
                  refinery.image_slideshows_admin_image_slideshow_image_slides_path,
                  :id => "reorder_action",
                  :class => "reorder_icon" %>
 
-    <%= link_to 'Finish Reordering',
+    <%= link_to t('.reorder_done'),
                  refinery.image_slideshows_admin_image_slideshow_image_slides_path,
                  :id => "reorder_action_done",
                  :style => "display: none;",
@@ -17,7 +17,7 @@
   </li>
   <% if @image_slideshow.present? %>
     <li>
-      <%= link_to "Back to Image Slideshows", refinery.image_slideshows_admin_image_slideshows_path,
+      <%= link_to t('.back_to_image_slideshows'), refinery.image_slideshows_admin_image_slideshows_path,
                    :class => "back_icon" %>
     </li>
   <% end %>

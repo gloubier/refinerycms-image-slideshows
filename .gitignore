@@ -1,1 +1,10 @@
 .DS_Store
+Gemfile.lock
+spec/dummy
+
+# Local Gemfile for developing without sharing dependencies
+.gemfile
+
+.gems
+.ruby-version
+.rbenv-gemsets

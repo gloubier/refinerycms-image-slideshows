@@ -7,7 +7,7 @@ module Refinery
 
       validates :title, presence: true, uniqueness: true
 
-      has_many :image_slides, dependent: :destroy
+      has_many :image_slides, -> { order(:position) }, dependent: :destroy
 
       class << self
 
